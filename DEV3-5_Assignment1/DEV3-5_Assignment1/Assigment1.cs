@@ -157,7 +157,7 @@ namespace DEV3_5_Assignment1
                     }
                     catch (Exception)
                     {
-                        throw; //still throws exception cannot find table 0.. But the delete works atm
+                        throw;
                     }
                     finally
                     {
@@ -256,7 +256,7 @@ namespace DEV3_5_Assignment1
                     }
                     catch (Exception)
                     {
-                        throw; //still throws exception cannot find table 0.. But the delete works atm
+                        throw; 
                     }
                     finally
                     {
@@ -409,7 +409,7 @@ namespace DEV3_5_Assignment1
                     }
                     catch (Exception)
                     {
-                        throw; //still throws exception cannot find table 0.. But the delete works atm
+                        throw;
                     }
                     finally
                     {
@@ -501,7 +501,7 @@ namespace DEV3_5_Assignment1
                     }
                     catch (Exception)
                     {
-                        throw; //still throws exception cannot find table 0.. But the delete works atm
+                        throw;
                     }
                     finally
                     {
@@ -632,7 +632,7 @@ namespace DEV3_5_Assignment1
                     }
                     catch (Exception)
                     {
-                        throw; //still throws exception cannot find table 0.. But the delete works atm
+                        throw;
                     }
                     finally
                     {
@@ -737,7 +737,7 @@ namespace DEV3_5_Assignment1
                     }
                     catch (Exception)
                     {
-                        throw; //still throws exception cannot find table 0.. But the delete works atm
+                        throw; 
                     }
                     finally
                     {
@@ -748,6 +748,27 @@ namespace DEV3_5_Assignment1
                         }
                     }
                 }
+            }
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            string ConnectionString = "Server=localhost;Database=dev3-05;Uid=root;Pwd=";
+            MySqlConnection connection = new MySqlConnection(ConnectionString);
+            connection.Open();
+
+            try
+            {
+                MySqlCommand cmd = connection.CreateCommand();
+                cmd.CommandText = "select p.name from projects p, buildings b WHERE p.buildingID = b.id AND p.budget * 0.1 < b.monthlyRent";
+                MySqlDataAdapter adapt = new MySqlDataAdapter(cmd);
+                DataSet ds = new DataSet();
+                adapt.Fill(ds);
+                dataGridView2.DataSource = ds.Tables[0].DefaultView;
+            }
+            catch (Exception)
+            {
+                throw;
             }
         }
     }

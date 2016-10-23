@@ -111,6 +111,9 @@
             this.label23 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
+            this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.btFindProj = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -131,6 +134,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvProjects)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudPMEID)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudPMPID)).BeginInit();
+            this.tabPage6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // btAdd
@@ -169,6 +174,7 @@
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.Controls.Add(this.tabPage5);
+            this.tabControl1.Controls.Add(this.tabPage6);
             this.tabControl1.Location = new System.Drawing.Point(12, 12);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -962,6 +968,36 @@
             this.label25.TabIndex = 28;
             this.label25.Text = "Projectmembers";
             // 
+            // tabPage6
+            // 
+            this.tabPage6.Controls.Add(this.btFindProj);
+            this.tabPage6.Controls.Add(this.dataGridView2);
+            this.tabPage6.Location = new System.Drawing.Point(4, 22);
+            this.tabPage6.Name = "tabPage6";
+            this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage6.Size = new System.Drawing.Size(947, 494);
+            this.tabPage6.TabIndex = 5;
+            this.tabPage6.Text = "SQL Query";
+            this.tabPage6.UseVisualStyleBackColor = true;
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Location = new System.Drawing.Point(6, 6);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.Size = new System.Drawing.Size(842, 181);
+            this.dataGridView2.TabIndex = 0;
+            // 
+            // btFindProj
+            // 
+            this.btFindProj.Location = new System.Drawing.Point(6, 193);
+            this.btFindProj.Name = "btFindProj";
+            this.btFindProj.Size = new System.Drawing.Size(205, 23);
+            this.btFindProj.TabIndex = 1;
+            this.btFindProj.Text = "Find Projects";
+            this.btFindProj.UseVisualStyleBackColor = true;
+            this.btFindProj.Click += new System.EventHandler(this.button1_Click_1);
+            // 
             // Assigment1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -995,6 +1031,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvProjects)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudPMEID)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudPMPID)).EndInit();
+            this.tabPage6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1084,6 +1122,9 @@
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.TabPage tabPage6;
+        private System.Windows.Forms.Button btFindProj;
+        private System.Windows.Forms.DataGridView dataGridView2;
     }
 }
 
